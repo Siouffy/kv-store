@@ -8,9 +8,6 @@ from logging import DEBUG
 
 class ZKDataManager(ZKNode):
 
-    _master = dict()  # dict of boolean representing if the node is a Master for a shard / key
-    _shards = dict()
-
     def __init__(self, ip='127.0.0.1', port=8800, zk_hosts='127.0.0.1', zk_root='ultkv', log_level=DEBUG,
                  request_handler=KVDefaultRequestHandler):
 
